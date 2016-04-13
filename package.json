@@ -1,0 +1,22 @@
+{
+  "name": "rileytoast",
+  "version": "1.0.0",
+  "description": "Personal website for Riley Mondragon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install && gulp less"
+  },
+  "author": "Riley Mondragon",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "lodash": "^4.11.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-less": "^3.0.5",
+    "gulp-notify": "^2.2.0"
+  }
+}
