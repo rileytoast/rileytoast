@@ -10,13 +10,12 @@
   "author": "Riley Mondragon",
   "license": "ISC",
   "dependencies": {
+    "bower": "^1.7.9",
     "coffee-script": "^1.10.0",
-    "lodash": "^4.11.0"
-  },
-  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-less": "^3.0.5",
-    "gulp-notify": "^2.2.0"
+    "gulp-notify": "^2.2.0",
+    "lodash": "^4.11.0"
   }
 }
