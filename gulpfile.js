@@ -17,7 +17,7 @@ gulp.task('styles', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./static/css'))
     .pipe(notify({ message: 'LESS task complete' }));
 });
 
