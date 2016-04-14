@@ -34,7 +34,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('build', function () {
-  runSequence(['coffee', 'styles'], ['browserify']);
+  runSequence(['coffee', 'styles'], 'browserify');
 });
 
 // gulp.task('browserify', function () {
