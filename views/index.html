@@ -1,48 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-init="dorian='home'">
   <head>
     <script src="../bower_components/angular/angular.js"></script>
+    <script src="../lib/bundle.js"></script>
     <link rel="stylesheet" href="../static/css/index.css">
     <title>Riley Mondragon</title>
   </head>
        
-  <body>
+  <body ng-app="rileyShows" ng-controller="mainController">
     <div id="page">
       <div id="header">
         <div class="links">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/resume">Resume</a></li>
-            <li><a href="/shows">Shows</a></li>
-            <li><a href="/angular">{{'angu' + 'lar'}}</a></li>
+            <li><a href='#' ng-click="dorian='home'"
+                ng-class="{'selected': dorian=='home'}">home</a></li>
+            <li><a href='#' ng-click="dorian='resume'"
+                ng-class="{'selected': dorian=='resume'}">resume</a></li>
+            <li><a href='#' ng-click="dorian='shows'"
+                ng-class="{'selected': dorian=='shows'}">shows</a></li>
           </ul>
-        </div>
-        <div class="blog-title">
-          <h1>riley mondragon</h1>
-          <img src="../static/images/rileypuff.jpg" alt="LOGO GOES HERE"/>
-          <p class="blog-description">trans actress at large</p>
         </div>
       </div>
       
       <div id="content">
         <div class="post text">
-          <div class="narrow">
-            <div class="title">
-              <h1>Page Title</h1>            
-            </div>
+          <div class="blog-title"
+              ng-if="dorian=='home'">
+            <h1>riley mondragon</h1>
+            <img src="../static/images/rileypuff.jpg" alt="LOGO GOES HERE"/>
+            <p class="blog-description">trans actress at large</p>
+          </div>
+          <div class="narrow"
+              ng-if="dorian!='home'">
             <div class="caption">
-              Text Goes here
+              <div class="resume"
+                  ng-if="dorian=='resume'">
+                <iframe src="https://drive.google.com/file/d/0B-S2OCaspQ4ILUlnUk5uWC1wM0k/preview"
+                  width="640"
+                  height="480">
+                </iframe>
+              </div>
+              <div class="shows"
+                  ng-if="dorian=='shows'">
+                <div ng-repeat="(key, show) in shows">
+                  {{show.name}} ~> {{show.date}}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div> <!-- content end -->
 
       <div id="footer">
-        <div id="footer-links">
+        <!-- <div id="footer-links">
           <ul>
             <li><a href="/">Home</a></li>
           </ul>
-        </div>
+        </div> -->
         
         <div class="colophon">
           <p>&copy; Riley Mondragon 2016</p>

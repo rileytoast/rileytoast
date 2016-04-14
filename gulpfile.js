@@ -5,6 +5,18 @@ var notify = require('gulp-notify');
 var coffee = require('gulp-coffee');
 var gutil = require('gulp-util');
 var runSequence = require('run-sequence');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+ 
+// Basic usage 
+gulp.task('browserify', function() {
+  return browserify('./lib/app.js')
+    .bundle()
+    //Pass desired output filename to vinyl-source-stream
+    .pipe(source('bundle.js'))
+    // Start piping stream to tasks!
+    .pipe(gulp.dest('./lib/'));
+});
 
 gulp.task('coffee', function() {
   gulp.src('./src/*.coffee')
@@ -22,7 +34,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('build', function () {
-  runSequence(['coffee', 'styles']);
+  runSequence(['coffee', 'styles', 'browserify']);
 });
 
 // gulp.task('browserify', function () {
