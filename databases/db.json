@@ -1,0 +1,12 @@
+{
+  "shows": {
+    "show1": {
+      "name": "butthead1",
+      "date": "02/02/10"
+    },
+    "show2": {
+      "name": "butthead2",
+      "date": "02/02/12"
+    }
+  }
+}
