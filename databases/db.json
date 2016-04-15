@@ -1,12 +1,18 @@
 {
   "shows": {
     "show1": {
-      "name": "butthead1",
-      "date": "02/02/10"
+      "name": "Butthead Live from Makeout Point",
+      "date": "Third Saturday of Every Month!",
+      "time": "10:30pm",
+      "location": "iO",
+      "image": "makeout-point.jpg"
     },
     "show2": {
-      "name": "butthead2",
-      "date": "02/02/12"
+      "name": "Story-telling at Arts and Culture Club",
+      "date": "April 21st and May 26th",
+      "time": "7:30pm",
+      "location": "Flatiron Arts Building",
+      "image": "culture-club.jpg"
     }
   }
 }

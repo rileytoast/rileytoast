@@ -3,7 +3,7 @@ _ = require 'lodash'
 app = angular.module 'rileyShows', []
 app.controller 'mainController', ($scope, $http) ->
   $scope.shows = {}
-  $scope.dorian = 'home'
+  $scope.dorian ?= 'home'
 
   # Get shows
   $http.get '/shows'

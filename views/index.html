@@ -42,8 +42,10 @@
               </div>
               <div class="shows"
                   ng-if="dorian=='shows'">
+                <h1 class="center">Upcoming Shows</h1>
                 <div ng-repeat="(key, show) in shows">
-                  {{show.name}} ~> {{show.date}}
+                  <strong> {{show.name}} </strong> <br> {{show.date}} @ {{show.time}} @ {{show.location}}
+                  <img ng-if="show.image" ng-src="../static/images/{{show.image}}"/>
                 </div>
               </div>
             </div>
