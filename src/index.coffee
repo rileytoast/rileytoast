@@ -17,6 +17,10 @@ app.get '/shows', (req, res) ->
     .then (data) ->
       res.send data
 
+app.get '/resume', (req, res) ->
+  resume = path.join __dirname, '../static/images/resume_RILEY_MONDRAGON.pdf'
+  res.download resume
+
 port = process.env.PORT or 3000
 app.listen port, ->
   console.log "App listening on port #{port}!"
