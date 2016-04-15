@@ -13,6 +13,13 @@
       "time": "7:30pm",
       "location": "Flatiron Arts Building",
       "image": "culture-club.jpg"
+    },
+    "show3": {
+      "name": "Action Jackson",
+      "date": "Thursdays May 12th - June 2nd",
+      "time": "10:30pm",
+      "location": "the blackout cabaret (Second City)",
+      "image": "action-jackson.jpg"
     }
   }
 }

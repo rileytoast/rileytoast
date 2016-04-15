@@ -45,7 +45,7 @@
                 <h1 class="center">Upcoming Shows</h1>
                 <div ng-repeat="(key, show) in shows">
                   <strong> {{show.name}} </strong> <br> {{show.date}} @ {{show.time}} @ {{show.location}}
-                  <img ng-if="show.image" ng-src="../static/images/{{show.image}}"/>
+                  <img class="show-image" ng-if="show.image" ng-src="../static/images/{{show.image}}"/>
                 </div>
               </div>
             </div>
